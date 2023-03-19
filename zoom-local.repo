@@ -1,0 +1,5 @@
+[zoom-local]
+name=Local Zoom Repository
+baseurl=file:///home/zapster/Downloads/zoom
+enabled=1
+gpgcheck=1

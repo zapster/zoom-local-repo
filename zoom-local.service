@@ -1,0 +1,11 @@
+[Unit]
+Description=Check for zoom updates
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/wget --directory-prefix=%h/Downloads/zoom --progress=dot:giga --mirror https://zoom.us/client/latest/zoom_x86_64.rpm
+ExecStart=/usr/bin/createrepo --update %h/Downloads/zoom
+
+#[Install]
+#WantedBy=default.target
